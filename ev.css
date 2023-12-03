@@ -1,0 +1,333 @@
+
+/* styles for display sizes > 996px */
+
+*, ::before, ::after {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ :root {
+     --main-red: rgb(194, 8, 8);
+ }
+
+    
+ 
+
+ .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     height: 65px;
+     border: 1px solid black;
+ }
+
+ #xlogo-img {
+     width: 45px;
+ }
+
+ .head-links {
+     width: 50%;
+     display: flex;
+     justify-content: space-around;
+    }
+
+    .head-links > a {
+        font-weight:  600;
+     color: #000;
+     text-decoration: none;
+
+    }
+
+    .head-links > a:hover {
+        text-decoration: none;
+    }
+
+    a {
+     text-decoration: none;
+     color: #000;
+    }
+
+    .upper-class {
+        background: linear-gradient(-45deg, rgb(151, 28, 28), rgb(63, 6, 6),rgb(70, 15, 15), rgb(139, 17, 17));
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        gap: 20px;
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+        height: 70vh;
+    }
+
+    #xlogo-upper {
+        width: 70px;
+    }
+
+    .web-name {
+        font-size: 1.8rem;
+    }
+
+    #searchEv {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchMovie {
+        border-radius: 8px;
+        border: none;
+        height: 50px;
+        width: 70%;
+        outline: none;
+    }
+
+    input[placeholder="Enter keywords..."]{
+        padding-left: 20px;
+    }
+
+    /* bug - the search icon is not fixed; objects moves around when screen size changes; */
+    /* bug solved - reaason not identified - it just started working - that is; does not transition on size change; */
+    .searchIcon {
+        height: 50px;
+        width: 80px;
+        position: absolute;
+        top: 21.7%;
+        /*top: calc(100% - 78.3%);  
+        left:calc(100% - 19.2%);*/
+        left: 80.2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(226, 27, 27);
+
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .contactIcons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        width: 35%;
+    }
+
+    .otherContactIcons {
+        background: #fff;
+        position: absolute;
+        top: 45%;
+        left: 64%;
+        width: 150px;
+    }
+
+    .c-btn {
+        padding: 3px;
+        padding-left: 10px;
+        display: flex;
+        color: #000;
+        align-items: center;
+        text-align: center;
+        outline: none;
+    }
+
+    .ct-btn {
+        transition: margin-bottom 1s ease;
+    }
+
+    /* a bug - when transition is added, for margin or padding - notice how the 
+    additional space increases the parent container and affects surrounding elements */
+
+    .ct-btn:hover {
+        margin-bottom: 10px;
+
+    }
+
+    .c-btn:hover {
+            background-color: rgb(0, 162, 255);
+        color: white;
+
+    }
+
+
+    .c-btn>*:hover {
+        color: white;
+    }
+
+    .otherIcon {
+        padding-left: 10px;
+        color: #00f;
+        font-size: 12px;
+    }
+
+    .hover-c-btn {
+        padding-left: 40%;
+    }
+
+    /* hover more icons  */
+
+    .otherContactIcons {
+        display: none;
+
+    }
+
+    .more:hover .otherContactIcons {
+        display: block;
+    }
+    
+.view-full-site {
+    background: rgb(194, 8, 8);
+    color: white;
+    font-weight: bold;
+    height: 60px;
+    width: 250px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s ease;
+}
+
+
+.view-full-site:hover {
+    transform: scale(1.1);
+}
+
+.view-full-site > a {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.siteInfo {
+    margin: 20px;
+}
+
+/* paragraph styles */
+
+.paraTitle {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.margined {
+    margin: 30px;
+    padding-left: 30px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+}
+
+.motivePara {
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 30px;
+}
+
+body > .lower-view-site-btn {
+    margin: 0 auto;
+}
+
+
+/* footer styles */
+
+.foo {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.fooLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.fooLinks > a {
+    color: #000;
+    text-decoration: none;
+}
+
+.fooLinks > a:hover {
+    color: var(--main-red);
+    text-decoration: none;
+}
+
+/* styles for display sizes < than 996px */
+
+@media only screen and (max-width: 996px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid black;
+        height: 65px;        
+        
+    }
+
+    #searchMovie {
+        width: 68%;
+        
+    }
+
+    .head-links {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+       }
+
+       
+
+    .searchIcon {
+        width: 80px;
+        position: absolute;
+        top: 21.7%;
+        left: 79%;
+
+        /* My theory was 
+        -using the calc function to specify the left and top position of the icon ensures it is 
+        responsive 
+        
+        This theory is wrong: */
+
+        /*top: calc(100% - 78.3%);
+        left:calc(100% - 21%); */
+        
+    }
+
+    .siteInfo, .margined {
+        padding: 0px 30px 0px 30px;
+    }
+
+
+
+}
+
+/* styles for displays < 500px */
+
+/* The following styles are not affecting the layout of any display size whatsoever, but may used as 
+a reference in case styles for such sizes are required ||
+
+The above media query takes care of every display below 996px and so the following media query is rendered useless:
+*/
+
+/*
+@media only screen and (max-width: 500px) {
+    .searchIcon {
+        width: 80px;
+        position: absolute;
+        top: calc(100% - 78.3%);
+        left:calc(100% - 13.7%);
+        
+    }
+}
+*/
+
